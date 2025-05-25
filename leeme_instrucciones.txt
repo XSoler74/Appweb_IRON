@@ -1,0 +1,21 @@
+El archivo está listo para descargar:
+
+    Nombre: ironsworn-lodestar-complete.tar.gz
+    Tamaño: 4.8 MB
+    Incluye: Todo el código fuente necesario para ejecutar tu aplicación
+
+Para descargarlo:
+
+    En el explorador de archivos de Replit (panel izquierdo)
+    Busca el archivo ironsworn-lodestar-complete.tar.gz
+    Haz clic derecho sobre él
+    Selecciona "Download"
+
+Una vez descargado en tu computadora:
+
+    Descomprime el archivo con: tar -xzf ironsworn-lodestar-complete.tar.gz
+    Entra a la carpeta del proyecto
+    Instala dependencias: npm install
+    Ejecuta la aplicación: npm run dev
+
+Tu aplicación Ironsworn Lodestar completa estará funcionando localmente en tu computadora con todas las funcionalidades: personajes, dados, oráculos, diario, juramentos y gestión de datos.
