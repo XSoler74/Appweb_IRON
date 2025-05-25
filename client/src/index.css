@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --background: 210 40% 98%; /* #F9FAFB */
+  --foreground: 222 84% 5%; /* #0F172A */
+  --muted: 210 40% 96%; /* #F1F5F9 */
+  --muted-foreground: 215 16% 47%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 84% 5%; /* #0F172A */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 84% 5%; /* #0F172A */
+  --border: 214 32% 91%; /* #E2E8F0 */
+  --input: 214 32% 91%; /* #E2E8F0 */
+  --primary: 25 62% 28%; /* #8B4513 - Iron color */
+  --primary-foreground: 210 40% 98%; /* #F9FAFB */
+  --secondary: 210 40% 96%; /* #F1F5F9 */
+  --secondary-foreground: 222 84% 5%; /* #0F172A */
+  --accent: 210 40% 96%; /* #F1F5F9 */
+  --accent-foreground: 222 84% 5%; /* #0F172A */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 210 40% 98%; /* #F9FAFB */
+  --ring: 25 62% 28%; /* #8B4513 */
+  --radius: 0.75rem;
+  
+  /* Custom colors for Ironsworn theme */
+  --iron-50: 27 100% 98%; /* #FAF7F3 */
+  --iron-100: 27 61% 93%; /* #F4EDE3 */
+  --iron-200: 27 53% 83%; /* #E8D5C1 */
+  --iron-300: 27 45% 73%; /* #DCBD9F */
+  --iron-400: 27 37% 56%; /* #C4935B */
+  --iron-500: 25 62% 28%; /* #8B4513 */
+  --iron-600: 25 74% 25%; /* #7D3E11 */
+  --iron-700: 25 67% 19%; /* #54290B */
+  --iron-800: 25 67% 14%; /* #3F1F08 */
+  --iron-900: 25 67% 10%; /* #2A1505 */
+  
+  --steel-50: 210 20% 98%; /* #F8F9FA */
+  --steel-100: 210 16% 93%; /* #E9ECEF */
+  --steel-200: 210 14% 89%; /* #DEE2E6 */
+  --steel-300: 210 11% 83%; /* #CED4DA */
+  --steel-400: 210 9% 53%; /* #6C757D */
+  --steel-500: 210 29% 24%; /* #2C3E50 */
+  --steel-600: 210 25% 21%; /* #243448 */
+  --steel-700: 210 23% 18%; /* #1E2A38 */
+  --steel-800: 210 25% 13%; /* #161F28 */
+  --steel-900: 210 22% 9%; /* #0F1419 */
+}
+
+.dark {
+  --background: 222 84% 5%; /* #0F172A */
+  --foreground: 210 40% 98%; /* #F9FAFB */
+  --muted: 217 19% 18%; /* #1E293B */
+  --muted-foreground: 215 16% 57%; /* #94A3B8 */
+  --popover: 222 84% 5%; /* #0F172A */
+  --popover-foreground: 210 40% 98%; /* #F9FAFB */
+  --card: 222 84% 5%; /* #0F172A */
+  --card-foreground: 210 40% 98%; /* #F9FAFB */
+  --border: 217 19% 18%; /* #1E293B */
+  --input: 217 19% 18%; /* #1E293B */
+  --primary: 27 45% 73%; /* #DCBD9F - Lighter iron for dark mode */
+  --primary-foreground: 222 84% 5%; /* #0F172A */
+  --secondary: 217 19% 18%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F9FAFB */
+  --accent: 217 19% 18%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F9FAFB */
+  --destructive: 0 63% 31%; /* #991B1B */
+  --destructive-foreground: 210 40% 98%; /* #F9FAFB */
+  --ring: 27 45% 73%; /* #DCBD9F */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .iron-bg {
+    background-color: hsl(var(--iron-500));
+  }
+  
+  .iron-bg-light {
+    background-color: hsl(var(--iron-100));
+  }
+  
+  .steel-bg {
+    background-color: hsl(var(--steel-500));
+  }
+  
+  .dice-animation {
+    animation: rollDice 0.6s ease-in-out;
+  }
+  
+  @keyframes rollDice {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    75% { transform: rotate(270deg) scale(1.1); }
+  }
+  
+  .progress-bar {
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
